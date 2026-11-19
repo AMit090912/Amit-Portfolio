@@ -1,0 +1,26 @@
+# ── Source material (kept locally, not published) ──
+# Raw, full-size screenshots — optimized copies live in site/assets/shots/
+pictures/
+# Original résumé + photo — the published copies are in site/assets/
+Resume and picture/
+# Project READMEs used to write the site content
+Projects-Readme/
+# Backup of an earlier design
+_old-design/
+
+# ── Hosting / tooling ──
+.vercel/
+.netlify/
+node_modules/
+
+# ── Secrets (none are needed, but never commit them) ──
+.env
+.env.*
+
+# ── OS / editor ──
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/

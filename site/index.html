@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amit — Drawing Set</title>
+<meta name="description" content="Amit, AI & backend engineer (Python, FastAPI, LLMs). Ten projects drawn as engineering sheets — each with the path it takes when the AI fails.">
+<meta name="theme-color" content="#1c2a43">
+<meta name="author" content="Amit">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Amit — AI &amp; Backend Engineer">
+<meta property="og:description" content="RAG assistants, agents and LLM pipelines, built on real APIs, databases and tests. Ten projects with their real architectures.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231c2a43'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' fill='%23efebe2' text-anchor='middle'%3EA%3C/text%3E%3Cpath d='M12 54H52' stroke='%23c4402a' stroke-width='3' stroke-dasharray='5 4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="theme-init.js"></script>
+</head>
+<body>
+
+<header class="bar">
+  <a class="bar__mark" href="#top">AMIT<span>/ drawing set · 2026</span></a>
+  <nav class="bar__nav" aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#revisions">Experience</a>
+    <a href="#bom">Skills</a>
+    <a href="#signoff">Contact</a>
+  </nav>
+  <div class="bar__actions">
+    <button class="theme" id="theme" type="button" aria-label="Switch between paper and blueprint">
+      <span class="theme__paper">Paper</span><span class="theme__blue">Blueprint</span>
+    </button>
+    <a class="btn btn--ink" href="assets/Amit_Resume.pdf" download>Résumé ↓</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ───────────── COVER SHEET ───────────── -->
+  <section class="cover sheet-frame">
+    <div class="cover__text">
+      <p class="eyebrow">Sheet 00 · Cover</p>
+      <h1 class="cover__name">Amit</h1>
+      <p class="cover__role">AI &amp; Backend Engineer — Python · FastAPI · LLMs</p>
+      <p class="cover__thesis">I build AI systems, and the backends that keep them <em>honest.</em></p>
+      <p class="cover__lede">
+        RAG assistants, agents and LLM pipelines, built on real APIs, databases and tests.
+        In every drawing below, the <span class="redline">red line</span> is what the system does when the
+        model is wrong, slow or missing.
+      </p>
+      <div class="cover__cta">
+        <a class="btn btn--ink" href="#work">Read the drawings</a>
+        <a class="btn" href="assets/Amit_Resume.pdf" download>Download résumé</a>
+        <a class="btn" href="mailto:amit9350@outlook.com">amit9350@outlook.com</a>
+      </div>
+    </div>
+
+    <figure class="portrait">
+      <div class="portrait__frame">
+        <img src="assets/amit.jpg" alt="Portrait of Amit" width="640" height="814">
+        <span class="dim dim--h"><i></i><b>Gurugram, IN</b><i></i></span>
+        <span class="dim dim--v"><i></i><b>Open to work</b><i></i></span>
+      </div>
+      <figcaption>Fig. 0 — The engineer <span class="scribble scribble--photo">↑ hi, that's me!</span></figcaption>
+    </figure>
+
+    <dl class="titleblock">
+      <div><dt>Open to</dt><dd>AI · Backend roles</dd></div>
+      <div><dt>Education</dt><dd>B.Tech CSE · CGPA 8.5</dd></div>
+      <div><dt>Graduating</dt><dd>June 2027</dd></div>
+      <div><dt>Location</dt><dd>Gurugram · Remote OK</dd></div>
+      <div><dt>Sheets</dt><dd>10 projects</dd></div>
+      <div><dt>Drawn by</dt><dd>Amit</dd></div>
+    </dl>
+  </section>
+
+  <!-- ───────────── ABOUT ───────────── -->
+  <section id="about" class="about">
+    <div class="about__intro">
+      <h2 class="about__hi">Hi, I'm Amit.</h2>
+      <p>I'm a final-year computer science student in Gurugram, graduating in June 2027. One question
+        keeps pulling me in: <strong>what happens to a product when the AI inside it gets something wrong?</strong></p>
+      <p>Most of my work answers that. I build the AI part (retrieval over private documents, tool-using
+        agents, vision models that read handwriting and electricity bills) and the backend part that makes it
+        dependable: typed APIs, real databases, queues, and a lot of tests.</p>
+      <p>I've interned twice. At Prism Infoways I made a 10,000-user Django app 45% faster. At Xelron I built
+        Docker-based environments that stress-test AI coding agents. Now I'm looking for an
+        <strong>AI engineer</strong> or <strong>backend engineer</strong> role, ideally one where the two meet.</p>
+      <p class="scribble scribble--sign">— Amit</p>
+    </div>
+    <div class="halves">
+      <div class="half">
+        <h3>The AI half</h3>
+        <ul>
+          <li><a href="#sheet-04">RAG over private documents</a><span>local embeddings, ChromaDB, grounded answers</span></li>
+          <li><a href="#sheet-09">Agents &amp; tool calling</a><span>Claude and Gemini planners, function calling</span></li>
+          <li><a href="#sheet-01">Vision + LLM extraction</a><span>bills, handwritten answer sheets, ASL</span></li>
+          <li><a href="#sheet-05">Evaluating agents</a><span>deterministic sims that score what really happened</span></li>
+          <li><a href="#sheet-06">Embeddings &amp; retrieval</a><span>FashionCLIP, FAISS, hybrid scoring</span></li>
+        </ul>
+      </div>
+      <div class="half">
+        <h3>The backend half</h3>
+        <ul>
+          <li><a href="#sheet-02">Layered FastAPI services</a><span>routers → services → repositories, JWT + RBAC</span></li>
+          <li><a href="#sheet-08">Async job pipelines</a><span>Celery, Redis, PostgreSQL, retries with backoff</span></li>
+          <li><a href="#sheet-03">Streaming</a><span>Server-Sent Events, token-by-token responses</span></li>
+          <li><a href="#sheet-01">Correctness you can test</a><span>~400 tests, Decimal maths, DB-enforced invariants</span></li>
+          <li><a href="#revisions">Performance</a><span>−45% latency with query tuning and Redis caching</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── KEY DIMENSIONS ───────────── -->
+  <section class="dims" aria-label="Key numbers">
+    <p class="eyebrow">In numbers</p>
+    <ul class="dims__list">
+      <li><b>−45%</b><span>API latency for a 10,000+ DAU app<br><small>MySQL tuning · Redis · pagination</small></span></li>
+      <li><b>495</b><span>automated tests on VedaAI's grading pipeline<br><small>~400 more on HelioFlow</small></span><em class="scribble scribble--dim">all green ✓</em></li>
+      <li><b>10</b><span>AI systems built and documented<br><small>RAG · agents · vision · pipelines</small></span></li>
+      <li><b>350+</b><span>DSA problems solved<br><small>1st place, university programming contest</small></span></li>
+    </ul>
+  </section>
+
+  <!-- ───────────── LEGEND ───────────── -->
+  <section class="legend" aria-label="How to read the drawings">
+    <p class="eyebrow">How to read these drawings</p>
+    <ul>
+      <li><svg viewBox="0 0 48 12" aria-hidden="true"><path d="M2 6H40" class="lg-main"/><path d="M40 2l6 4-6 4z" class="lg-head"/></svg>Request path</li>
+      <li><svg viewBox="0 0 48 12" aria-hidden="true"><path d="M2 6H40" class="lg-fb"/><path d="M40 2l6 4-6 4z" class="lg-head lg-head--fb"/></svg>Fallback — when the AI fails</li>
+      <li><svg viewBox="0 0 30 18" aria-hidden="true"><rect x="1" y="1" width="28" height="16" class="lg-ai"/></svg>Model / LLM call</li>
+      <li><svg viewBox="0 0 30 18" aria-hidden="true"><rect x="1" y="1" width="28" height="16" class="lg-det"/></svg>Deterministic code</li>
+      <li><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" class="lg-balloon"/><text x="11" y="15" text-anchor="middle">1</text></svg>Callout — see notes</li>
+    </ul>
+  </section>
+
+  <!-- ───────────── PRIMARY SHEETS ───────────── -->
+  <section id="work" class="work">
+    <header class="section-head">
+      <p class="eyebrow">Sheets 01 – 04</p>
+      <h2>Primary work</h2>
+    </header>
+    <div id="primary"></div>
+  </section>
+
+  <section class="work">
+    <header class="section-head">
+      <p class="eyebrow">Sheets 05 – 10</p>
+      <h2>Supporting sheets</h2>
+    </header>
+    <div id="secondary" class="grid2"></div>
+  </section>
+
+  <!-- ───────────── REVISIONS ───────────── -->
+  <section id="revisions" class="block sheet-frame">
+    <header class="section-head">
+      <p class="eyebrow">Revision history</p>
+      <h2>Experience</h2>
+    </header>
+    <div class="table-wrap">
+      <table class="rev">
+        <thead><tr><th>Rev</th><th>Date</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="rev__id">B</td>
+            <td class="mono">Jul – Oct 2026</td>
+            <td>
+              <strong>SDE Intern · Xelron</strong> <span class="muted">(Remote)</span>
+              <ul>
+                <li>Built Docker-based execution environments and PyTest/Bash validation pipelines that make terminal-based engineering benchmarks run deterministically.</li>
+                <li>Designed debugging scenarios — dependency hell, file-system ops, Linux workflows — that expose edge cases in AI coding agents.</li>
+                <li>Wrote the tests and evaluation criteria for each task; iterated through code review to raise rigor.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="rev__id">A</td>
+            <td class="mono">Jul – Sep 2024</td>
+            <td>
+              <strong>SDE Intern · Prism Infoways</strong> <span class="muted">(Remote)</span>
+              <ul>
+                <li>Cut API latency <b>45%</b> for a 10,000+ DAU app — MySQL query optimisation, Redis caching, DRF pagination.</li>
+                <li>Shipped secure REST APIs in Django REST Framework at <b>85%+</b> test coverage.</li>
+                <li>Implemented JWT auth and role-based access; delivered 5+ production features in Agile sprints.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="rev__id">0</td>
+            <td class="mono">2023 – 2027</td>
+            <td><strong>B.Tech, Computer Science &amp; Engineering · K.R. Mangalam University</strong> <span class="muted">— CGPA 8.5 / 10</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ───────────── BOM ───────────── -->
+  <section id="bom" class="block sheet-frame">
+    <header class="section-head">
+      <p class="eyebrow">Bill of materials</p>
+      <h2>Skills</h2>
+    </header>
+    <div class="table-wrap">
+      <table class="bom">
+        <thead><tr><th>Item</th><th>Assembly</th><th>Parts</th></tr></thead>
+        <tbody>
+          <tr><td>01</td><td>LLMs &amp; agents</td><td>Claude · Gemini · Groq APIs · tool / function calling · prompt engineering · structured output · fallbacks</td></tr>
+          <tr><td>02</td><td>Retrieval &amp; ML</td><td>RAG · LangChain · ChromaDB · FAISS · embeddings (MiniLM, FashionCLIP) · Ollama · MediaPipe · OpenCV</td></tr>
+          <tr><td>03</td><td>Backend &amp; APIs</td><td>Python · FastAPI · Django · DRF · Flask · SQLAlchemy · Celery · SSE · REST design · JWT · RBAC</td></tr>
+          <tr><td>04</td><td>Data</td><td>PostgreSQL · MySQL · SQLite · Redis · query optimisation · schema design · Alembic</td></tr>
+          <tr><td>05</td><td>Quality</td><td>PyTest · Django TestCase · TDD · Playwright · 85%+ coverage · code review</td></tr>
+          <tr><td>06</td><td>Infra</td><td>Docker · Linux · Bash · Git · CI/CD · Azure (AZ-900) · Render · Vercel</td></tr>
+          <tr><td>07</td><td>Fundamentals</td><td>C++ · Java · SQL · DSA · DBMS · OS · networks · system design</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <p class="eyebrow">General notes</p>
+      <ol>
+        <li><strong class="cert-strong">Microsoft Certified: Azure Fundamentals (AZ-900).</strong></li>
+        <li>Infosys Certified — SQL Joins &amp; Subqueries.</li>
+        <li>1st place, university-level competitive programming contest.</li>
+        <li>Selected for the University Ignite batch from 2,000+ applicants.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ───────────── SIGN-OFF ───────────── -->
+  <section id="signoff" class="signoff sheet-frame">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2 class="signoff__title">Let's build something that doesn't break.</h2>
+      <p class="signoff__lede">Open to AI engineer and backend engineer roles: full-time from mid-2027, or an internship before then. Email is the fastest way to reach me.</p>
+    </div>
+    <dl class="signoff__block">
+      <div><dt>Email</dt><dd><a href="mailto:amit9350@outlook.com">amit9350@outlook.com</a></dd></div>
+      <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/amit-singh0409" target="_blank" rel="noopener">in/amit-singh0409</a></dd></div>
+      <div><dt>GitHub</dt><dd><a href="https://github.com/AMit090912" target="_blank" rel="noopener">AMit090912</a></dd></div>
+      <div><dt>LeetCode</dt><dd><a href="https://leetcode.com/u/Amit6576" target="_blank" rel="noopener">u/Amit6576</a></dd></div>
+      <div><dt>Résumé</dt><dd><a href="assets/Amit_Resume.pdf" download>Amit_Resume.pdf ↓</a></dd></div>
+    </dl>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span>Amit · Drawing set rev. B · 2026</span>
+  <span>Built from scratch: HTML, CSS, SVG.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
